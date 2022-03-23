@@ -1,0 +1,37 @@
+networks:
+  172.16.20.0/24:
+    devices:
+      - type: switch
+        name: sw1
+      - type: switch
+        name: sw2
+      - type: streaming
+        manufacturer: roku
+      - type: printer
+        name: printer-office-1
+        manufacturer: 'Xerox'
+        model: 'PRIMELINK C9065/C9070'
+      - type: printer
+        name: printer-office-2
+        manufacturer: 'Xerox'
+        model: 'PRIMELINK C9065/C9070'
+      - type: printer
+        name: printer-office-3
+        manufacturer: 'Epson'
+        model: 'WorkForce Enterprise WF-C21000'
+      - type: streaming
+        manufacturer: roku
+      - type: phone
+        name: frontdesk-voip
+      - type: phone
+        name: conference-voip
+      - type: phone
+        name: warehouse-1-voip
+      - type: phone
+        name: warehouse-2-voip
+      - type: phone
+        name: office-1-voip
+      - type: phone
+        name: office-2-voip
+      - type: phone
+        name: office-3-voip
