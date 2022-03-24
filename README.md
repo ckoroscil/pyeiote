@@ -8,3 +8,8 @@ A simple enterprise IoT traffic emulator.
 ```bash
 python -m pip install git+https://github.com/ckoroscil/pyeiote.git
 ```
+# Build
+
+```bash
+python3 -m build
+```
