@@ -6,6 +6,7 @@ networks:
       - type: switch
         name: sw2
       - type: streaming
+        mac: B0:EE:7B:CE:87:66
         manufacturer: roku
       - type: printer
         name: printer-office-1
@@ -16,10 +17,12 @@ networks:
         manufacturer: 'Xerox'
         model: 'PRIMELINK C9065/C9070'
       - type: printer
+        mac: 38:9d:92
         name: printer-office-3
         manufacturer: 'Epson'
         model: 'WorkForce Enterprise WF-C21000'
       - type: streaming
+        mac: B0:EE:7B:FF:9F:F0
         manufacturer: roku
       - type: phone
         name: frontdesk-voip
