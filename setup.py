@@ -26,6 +26,7 @@ setuptools.setup(
     install_requires=[
         'PyYAML==6.0',
         'scapy @ git+https://github.com/secdev/scapy@eb1e56d676c78ccbd5a3c820b931ac50f6a5a4f8'
-    ]
-
+    ],
+    package_data={'': ['config.yaml']},
+    include_package_data=True
 )

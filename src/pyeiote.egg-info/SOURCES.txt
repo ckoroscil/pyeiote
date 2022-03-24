@@ -4,6 +4,7 @@ pyproject.toml
 setup.py
 src/pyeiote/__init__.py
 src/pyeiote/config.py
+src/pyeiote/config.yaml
 src/pyeiote/eiot_traffic_gen.py
 src/pyeiote/utils.py
 src/pyeiote.egg-info/PKG-INFO
