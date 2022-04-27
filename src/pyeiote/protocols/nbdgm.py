@@ -49,18 +49,12 @@ class NBDGM(BaseProtocol):
             return NBTDatagram(Type=17, Flags=0x0a, SourceIP=srcip, SourcePort=const.UDP_NBDS, SourceName=str.encode(hostname), DestinationName=b'WORKGROUP')/\
                 SMB_Header(Command=0x25, Flags=0x0, PIDLow=0)/\
                 SMBNetlogon_Protocol_Response_Header(TotalDataCount=len(payload), TimeOut1=0, TimeOut2=0, DataCount=len(payload), DataOffset=86)/\
-                SMBMailSlot(priority=0, name=mailslot_name, size=(len(mailslot_name) + len(payload) + 1))/self.__generate_election_request()
+                SMBMailSlot(priority=0, name=mailslot_name, size=(len(mailslot_name) + len(payload) + 1))
         elif cmd == 'announcement':
             #return NBTDatagram()/SMB()/SMBMailSlot()/self.__generate_host_announcement()
             return NBTDatagram()/SMB_Header(Flags=0)/SMBNetlogon_Protocol_Response_Header(TotalDataCount=33, TimeOut1=0, TimeOut2=0, DataCount=33, DataOffset=86)/SMBMailSlot(name=mailslot_name, size=50)/b'\x01\x01\x80\xfc\x0a\x00' + '{:\x00<16}'.format(hostname).encode() + b'\x04\x09\x03\x1a\x80\x00\x0f\x01\x55\xaa\x00'
         else:
             raise Exception('Unknown browser protocol command: {}'.format(cmd))
-
-    def __generate_host_announcement(self):
-        server_types = self.config.get('server_types', [])
-    
-    def __generate_election_request(self):
-        pass
 
     def __generate_payload(self, nbds_type, hostname):
         payload = ''

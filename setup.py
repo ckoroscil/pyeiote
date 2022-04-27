@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pyeiote",
-    version="0.2.5",
+    version="0.2.6",
     author="Craig Koroscil",
     author_email="ckoroscil@circadence.com",
     description="A simple enterprise IoT traffic emulator",
