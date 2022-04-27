@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pyeiote
-Version: 0.2.0
+Version: 0.2.1
 Summary: A simple enterprise IoT traffic emulator
 Home-page: https://github.com/ckoroscil/pyeiote
 Author: Craig Koroscil
@@ -25,9 +25,17 @@ A simple enterprise IoT traffic emulator.
 ```bash
 python -m pip install git+https://github.com/ckoroscil/pyeiote.git
 ```
+
+# Usage
+
+```bash
+python3 -m pyeiote --debug -i eth0
+```
+
 # Build
 
 ```bash
+python3 -m pip install --upgrade build
 python3 -m build
 ```
 

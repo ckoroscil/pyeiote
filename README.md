@@ -18,5 +18,6 @@ python3 -m pyeiote --debug -i eth0
 # Build
 
 ```bash
+python3 -m pip install --upgrade build
 python3 -m build
 ```

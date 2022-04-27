@@ -3,9 +3,9 @@ README.md
 pyproject.toml
 setup.py
 src/pyeiote/__init__.py
+src/pyeiote/__main__.py
 src/pyeiote/config.py
 src/pyeiote/config.yaml
-src/pyeiote/eiot_traffic_gen.py
 src/pyeiote/utils.py
 src/pyeiote.egg-info/PKG-INFO
 src/pyeiote.egg-info/SOURCES.txt
@@ -16,6 +16,7 @@ src/pyeiote/device_profiles/__init__.py
 src/pyeiote/device_profiles/base.py
 src/pyeiote/device_profiles/device.py
 src/pyeiote/device_profiles/generic.py
+src/pyeiote/device_profiles/nas.py
 src/pyeiote/device_profiles/phone.py
 src/pyeiote/device_profiles/printer.py
 src/pyeiote/device_profiles/profiles.py
