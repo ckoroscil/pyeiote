@@ -4,7 +4,7 @@
 from .base import BaseProtocol
 from scapy.all import Ether, IP, UDP, NBTDatagram, SMBMailSlot, SMB_Header, SMBNetlogon_Protocol_Response_Header
 from . import const
-from utils import network_to_broadcat
+from pyeiote.utils import network_to_broadcat
 
 """
 srcip

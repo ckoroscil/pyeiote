@@ -1,5 +1,4 @@
 import threading
-import time
 import random
 from scapy.all import sendp
 import logging
