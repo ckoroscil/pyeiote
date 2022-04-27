@@ -1,6 +1,6 @@
 import threading
 from .utils import generate_mac, generate_hostname
-from ...protocols.protocol import Protocol
+from pyeiote.protocols.protocol import Protocol
 import logging
 
 logger = logging.getLogger('eiot-traffic-gen')
