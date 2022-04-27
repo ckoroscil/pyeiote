@@ -1,4 +1,4 @@
-from utils import load_yaml
+from .utils import load_yaml
 import json
 
 class DotConfig(object):

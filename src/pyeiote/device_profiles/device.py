@@ -3,6 +3,7 @@ from .generic import Generic
 from .phone import Phone
 from .switch import Switch
 from .streaming import Streaming
+from .nas import NAS
 
 class Device(object):
     def __new__(cls, cfg):
@@ -18,5 +19,7 @@ class Device(object):
             return Switch(cfg)
         if device_type == 'streaming':
             return Streaming(cfg)
+        if device_type == 'nas':
+            return NAS(cfg)
 
         raise Exception('Unknown device type: {}'.format(device_type))

@@ -1,8 +1,7 @@
 from .base import BaseProtocol
 from scapy.all import Packet, Ether, IP, UDP, DNS, DNSRR, DNSRRSRV, DNSRRNSEC, dns_compress
 from . import const
-import uuid
-import random
+
 
 """
 device: manufacture
@@ -21,7 +20,6 @@ class MDNS(BaseProtocol):
     def generate_packet(self):
         srcip = self.device.get('ipv4', None)
         srcmac = self.device.get('mac', None)
-        hostname = self.device.get('hostname', None)
 
         dstip = const.IPV4_MULTICAST_MDNS
         dstmac = self.__generate_dstmac(dstip)
