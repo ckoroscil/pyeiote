@@ -40,9 +40,9 @@ class NBDGM(BaseProtocol):
         """
         
         return Ether(src=srcmac, dst=dstmac)/\
-            IP(src=srcip, dst=dstip, ttl=255)/UDP(sport=sport, dport=dport)/self.__generate_nbdgm(srcip, hostname)
+            IP(src=srcip, dst=dstip, ttl=255)/UDP(sport=sport, dport=dport)/self.__generate_nbdgm(srcip, hostname, payload, mailslot_name)
     
-    def __generate_nbdgm(self, srcip, hostname):
+    def __generate_nbdgm(self, srcip, hostname, payload, mailslot_name):
         cmd = self.config.get('cmd', 'election')
 
         if cmd == 'election':
